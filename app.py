@@ -5,6 +5,15 @@ from db_init import con, initialize_tables, populate_all_date
 from config import insert_sample_basic_setup
 from simulation import make_all_thing
 
+hide_streamlit_style = """
+<style>
+#MainMenu {visibility: hidden;}
+footer {visibility: hidden;}  # Optional: Hides the "Made with Streamlit" footer
+header {visibility: hidden;}  # Optional: Hides the top header if present
+</style>
+"""
+st.markdown(hide_streamlit_style, unsafe_allow_html=True)
+
 # Page configuration
 st.set_page_config(page_title="Economic Simulation", layout="wide")
 
